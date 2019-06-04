@@ -1,0 +1,274 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #4CE81A;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        min-height: 72vh !important;
+        justify-content: center;
+        padding: 0 30px 40px !important;
+        text-align: center;
+        color: #FAFAFA;
+    }
+
+    .icons-social i {
+        padding: 7px !important;
+    }
+}
+
+@media (min-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/* Custom Styles */
+container {
+    top: 0px;
+    background: #fff;
+    width: 100%;
+    /* height: 100%; */
+    position: absolute;
+    left: 0%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    min-height: 87vh;
+    justify-content: center;
+    padding: 0 30px 150px;
+    text-align: center;
+}
+
+    header > .intro {
+        font-family: 'Sedgwick Ave', cursive;
+        font-size: 5em;
+        font-weight: 600;
+    }
+
+
+}
+
+.fallingLeaves {
+    text-align: center;
+}
+
+    .fallingLeaves span {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin: -280px 40px 54px -34px;
+        background: url("leaf.png");
+        -webkit-animation: fallingLeaves 10s infinite linear;
+        -moz-animation: fallingLeaves 10s infinite linear;
+    }
+
+        .fallingLeaves span:nth-child(5n+5) {
+            -webkit-animation-delay: 1.3s;
+            -moz-animation-delay: 1.3s;
+        }
+
+        .fallingLeaves span:nth-child(3n+2) {
+            -webkit-animation-delay: 1.5s;
+            -moz-animation-delay: 1.5s;
+        }
+
+        .fallingLeaves span:nth-child(2n+5) {
+            -webkit-animation-delay: 1.7s;
+            -moz-animation-delay: 1.7s;
+        }
+
+        .fallingLeaves span:nth-child(3n+10) {
+            -webkit-animation-delay: 2.7s;
+            -moz-animation-delay: 2.7s;
+        }
+
+        .fallingLeaves span:nth-child(7n+2) {
+            -webkit-animation-delay: 3.5s;
+            -moz-animation-delay: 3.5s;
+        }
+
+        .fallingLeaves span:nth-child(4n+5) {
+            -webkit-animation-delay: 5.5s;
+            -moz-animation-delay: 5.5s;
+        }
+
+        .fallingLeaves span:nth-child(3n+7) {
+            -webkit-animation-delay: 8s;
+            -moz-animation-delay: 8s;
+        }
+
+@-webkit-keyframes fallingLeaves {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0px) rotateZ(0deg);
+    }
+
+    75% {
+        opacity: 1;
+        -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+    }
+}
+
+@-moz-keyframes fallingLeaves {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0px) rotateZ(0deg);
+    }
+
+    75% {
+        opacity: 1;
+        -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+    }
+}
+
+
+
+/* Icons */
+ul.icons-social {
+    padding: 0px;
+}
+
+.icons-social li {
+    display: inline-block;
+}
+
+.icons-social i {
+    font-size: 2em;
+    padding: 7px;
+    color: #FAFAFA;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    transition: 250ms;
+}
+
+.icons-social a svg path {
+    fill: #4B5658;
+}
+
+/* Icon Hover */
+
+.fab:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: transparent;
+}
+    
+
+.fa-twitter:hover {
+    color: #00ACED;
+    box-shadow: 0 0 24px 0 #00ACED;
+
+}
+
+.fa-facebook:hover {
+    color: #3b5998;
+    box-shadow: 0 0 24px 0 #3b5998;
+
+}
+
+.fa-instagram:hover {
+    color: #d6249f;
+    box-shadow: 0 0 24px 0 #d6249f;
+
+}
+
+/* /Icon Hover*/
+/* /Icon */
+
+footer {
+    margin-bottom: 20px;
+    text-align:center;
+
+}
+
+.devto {
+    margin-bottom: -0.20rem;
+}
+
+    .devto svg {
+        margin-bottom: -0.20rem;
+        margin-left: 0.675rem;
+        width: 2.65rem;
+        height: 2.65rem;
+    }
+
+
